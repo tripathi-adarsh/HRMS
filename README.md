@@ -1,64 +1,136 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+# HRMS Pro — Human Resource Management System
 
-<p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+A full-featured HR Management System built with **Laravel 8**, **Bootstrap 5**, and **MySQL**. Designed for small to mid-size organizations to manage employees, attendance, payroll, leaves, performance, and more — with a clean, modern UI and dark mode support.
 
-## About Laravel
+---
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+## Author
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+**Adarsh Tripathi**
+GitHub: [@tripathi-adarsh](https://github.com/tripathi-adarsh)
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## Tech Stack
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+- **Backend:** PHP 7.4, Laravel 8
+- **Frontend:** Bootstrap 5.3, Bootstrap Icons, Chart.js
+- **Database:** MySQL
+- **Auth:** Laravel Breeze + Spatie Laravel Permission
+- **API Auth:** Laravel Sanctum
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains over 1500 video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+---
 
-## Laravel Sponsors
+## Features
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the Laravel [Patreon page](https://patreon.com/taylorotwell).
+### Admin / HR
+- **Dashboard** — Live stats: total employees, present today, on leave, monthly payroll, attendance chart, department breakdown
+- **Employee Management** — Full CRUD with department, designation, salary, joining date, photo
+- **Department & Designation** — Manage org structure
+- **Attendance Management** — Mark attendance with styled toggle buttons (Present / Absent / Late / Half Day / Holiday), punch in/out times, department filter, live count bar, bulk mark all
+- **Leave Management** — Approve/reject leave requests, filter by employee, department, type, status
+- **Payroll** — Generate monthly payroll, edit bonus/deductions, view payslip, filter by month/department/status
+- **Salary Calculator** — Advanced CTC breakdown tool with HRA, PF, ESI, Professional Tax, New/Old tax regime, live doughnut chart
+- **Performance** — Assign tasks, rate employees (1–5 stars), track status
+- **Reports** — Attendance, Leave, and Payroll reports with full filters (employee, department, type, status, month/year) and summary cards
 
-### Premium Partners
+### Employee Self-Service (ESS)
+- **My Dashboard** — Personalized portal with live clock, punch in/out, this month's attendance summary with progress bar
+- **Salary Overview** — View CTC, estimated pro-rated in-hand salary, payroll breakdown, payment status, 6-month history
+- **Leave Portal** — View leave summary, apply for leave, track request status
+- **Salary Calculator** — Calculate own in-hand salary with custom inputs
+- **My Performance** — View assigned tasks and ratings
+- **My Attendance** — Calendar view of monthly attendance
 
-- **[Vehikl](https://vehikl.com/)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Cubet Techno Labs](https://cubettech.com)**
-- **[Cyber-Duck](https://cyber-duck.co.uk)**
-- **[Many](https://www.many.co.uk)**
-- **[Webdock, Fast VPS Hosting](https://www.webdock.io/en)**
-- **[DevSquad](https://devsquad.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel/)**
-- **[OP.GG](https://op.gg)**
-- **[WebReinvent](https://webreinvent.com/?utm_source=laravel&utm_medium=github&utm_campaign=patreon-sponsors)**
-- **[Lendio](https://lendio.com)**
+### UI/UX
+- Deep purple gradient sidebar with glowing active states
+- Dark mode toggle (persisted in localStorage)
+- Fully responsive — works on mobile, tablet, desktop
+- Custom pagination with Bootstrap 5 styling
+- Animated login page with clickable demo credential cards
 
-## Contributing
+---
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+## Demo Credentials
 
-## Code of Conduct
+| Role     | Email                          | Password |
+|----------|-------------------------------|----------|
+| Admin    | admin@hrms.com                | password |
+| HR       | hr@hrms.com                   | password |
+| Employee | arjun.sharma@company.com      | password |
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+---
 
-## Security Vulnerabilities
+## Installation
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+```bash
+# Clone the repo
+git clone https://github.com/tripathi-adarsh/HRMS.git
+cd HRMS
+
+# Install PHP dependencies
+composer install
+
+# Copy environment file
+cp .env.example .env
+
+# Generate app key
+php artisan key:generate
+
+# Configure your database in .env
+DB_DATABASE=hrms
+DB_USERNAME=root
+DB_PASSWORD=
+
+# Run migrations and seed fake data
+php artisan migrate --seed
+
+# Install frontend dependencies (optional)
+npm install && npm run dev
+
+# Start the server
+php artisan serve
+```
+
+Then open `http://127.0.0.1:8000` and log in with any demo credential above.
+
+---
+
+## Project Structure
+
+```
+app/
+  Http/Controllers/
+    AttendanceController.php
+    DashboardController.php
+    ESSController.php          # Employee Self-Service
+    LeaveController.php
+    PayrollController.php
+    PerformanceController.php
+    ReportController.php
+    ...
+  Models/
+    Employee, Attendance, Leave, Payroll, Performance ...
+
+resources/views/
+  attendance/     # Attendance management + calendar
+  auth/           # Login page
+  dashboard.blade.php
+  ess/portal.blade.php        # Employee portal
+  employees/      # CRUD views
+  leaves/         # Leave management
+  payroll/        # Payroll + salary calculator
+  performance/    # Performance tracking
+  reports/        # Attendance, leave, payroll reports
+  layouts/app.blade.php       # Main layout with sidebar
+
+database/
+  migrations/     # All table schemas
+  seeders/        # 20 fake employees + attendance, leaves, payroll
+```
+
+---
 
 ## License
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+MIT License — free to use and modify.
